@@ -8,5 +8,6 @@ function selectLoadout(loadout) {
     const selectedWeapon = loadout.weapons[Math.floor(Math.random() * loadout.weapons.length)];
     const selectedItem = loadout.items[Math.floor(Math.random() * loadout.items.length)];
     //combine the three elements into a single string and display it to the user
-    console.log(`You are a ${selectedClass}, equipped with a ${selectedWeapon}. You have a ${selectedItem} in your inventory.`);
+    const message = `You are a ${selectedClass} equipped with a ${selectedWeapon}. You have a ${selectedItem} in your inventory.`;
+    console.log(message);
 }
