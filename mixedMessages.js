@@ -1,8 +1,7 @@
-//this is the start of the code for the mixed messages project
-//user runs program
-//store array of class, weapon, and item
+//store object with class, weapon, and item
 const loadout = {classes: ['Warrior', 'Mage', 'Rogue','Archer','Monk'], weapons: ['Sword', 'Staff', 'Dagger','Bow','Staff'], items: ['Health Potion', 'Mana Potion', 'Stamina Potion','Poison Potion','Agility Potion']};
-//iterate through each array and randomly select one element from each
+
+//randomly select one class, one weapon, and one item from the loadout object
 function selectLoadout(loadout) {
     const selectedClass = loadout.classes[Math.floor(Math.random() * loadout.classes.length)];
     const selectedWeapon = loadout.weapons[Math.floor(Math.random() * loadout.weapons.length)];
@@ -11,3 +10,6 @@ function selectLoadout(loadout) {
     const message = `You are a ${selectedClass} equipped with a ${selectedWeapon}. You have a ${selectedItem} in your inventory.`;
     console.log(message);
 }
+
+//user runs program
+selectLoadout(loadout);
