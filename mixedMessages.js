@@ -28,10 +28,27 @@ function promptUser(loadout) {
     //if user selects view items, display items
     case 'view items':
       console.log('Items: ' + loadout.items.join(', '));
-      break;}}
-//if user selects add class, prompt user to enter class and add it to classes array
-//if user selects add weapon, prompt user to enter weapon and add it to weapons array
-//if user selects add item, prompt user to enter item and add it to items array
+      break;
+    //if user selects add class, prompt user to enter class and add it to classes array
+    case 'add class':
+      const newClass = prompt('Enter a new class: ');
+      loadout.classes.push(newClass);
+      console.log(`${newClass} has been added to classes.`);
+      break;
+    //if user selects add weapon, prompt user to enter weapon and add it to weapons array
+    case 'add weapon':
+      const newWeapon = prompt('Enter a new weapon: ');
+      loadout.weapons.push(newWeapon);
+      console.log(`${newWeapon} has been added to weapons.`);
+      break;
+    //if user selects add item, prompt user to enter item and add it to items array
+    case 'add item':
+      const newItem = prompt('Enter a new item: ');
+      loadout.items.push(newItem);
+      console.log(`${newItem} has been added to items.`);
+      break;
+  }
+}
 
 //user runs program
 promptUser(loadout);
