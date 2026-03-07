@@ -12,15 +12,25 @@ function selectLoadout(loadout) {
 }
 
 //ask user what they want to do (view classes, view weapons, view items, add class, add weapon, add item, or select loadout)
-function promptUser() {
-    const action = prompt('What would you like to do? (view classes, view weapons, view items, add class, add weapon, add item, select loadout)').toLowerCase().trim();
-}
-//if user selects view classes, display classes
-//if user selects view weapons, display weapons
-//if user selects view items, display items
+function promptUser(loadout) {
+    const prompt = require('prompt-sync')();
+    let action = prompt('What would you like to do? (view classes, view weapons, view items, add class, add weapon, add item, select loadout)\n Selection:').toLowerCase().trim();
+  switch (action) {
+    //if user selects view classes, display classes
+    case 'view classes':
+      console.log('Classes: ' + loadout.classes.join(', '));
+      break;
+    //if user selects view weapons, display weapons
+    case 'view weapons':
+      console.log('Weapons: ' + loadout.weapons.join(', '));
+      break;
+    //if user selects view items, display items
+    case 'view items':
+      console.log('Items: ' + loadout.items.join(', '));
+      break;}}
 //if user selects add class, prompt user to enter class and add it to classes array
 //if user selects add weapon, prompt user to enter weapon and add it to weapons array
 //if user selects add item, prompt user to enter item and add it to items array
 
 //user runs program
-selectLoadout(loadout);
+promptUser(loadout);
