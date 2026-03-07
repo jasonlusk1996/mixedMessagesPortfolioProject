@@ -14,46 +14,48 @@ function selectLoadout(loadout) {
 //ask user what they want to do (view classes, view weapons, view items, add class, add weapon, add item, or select loadout)
 function promptUser(loadout) {
     const prompt = require('prompt-sync')();
-    console.log('What would you like to do? (view classes, view weapons, view items, add class, add weapon, add item, select loadout)');
-    let action = prompt('Selection: ').toLowerCase().trim();
-  switch (action) {
-    //if user selects view classes, display classes
-    case 'view classes':
-      console.log('Classes: ' + loadout.classes.join(', '));
-      break;
-    //if user selects view weapons, display weapons
-    case 'view weapons':
-      console.log('Weapons: ' + loadout.weapons.join(', '));
-      break;
-    //if user selects view items, display items
-    case 'view items':
-      console.log('Items: ' + loadout.items.join(', '));
-      break;
-    //if user selects add class, prompt user to enter class and add it to classes array
-    case 'add class':
-      const newClass = prompt('Enter a new class: ');
-      loadout.classes.push(newClass);
-      console.log(`${newClass} has been added to classes.`);
-      break;
-    //if user selects add weapon, prompt user to enter weapon and add it to weapons array
-    case 'add weapon':
-      const newWeapon = prompt('Enter a new weapon: ');
-      loadout.weapons.push(newWeapon);
-      console.log(`${newWeapon} has been added to weapons.`);
-      break;
-    //if user selects add item, prompt user to enter item and add it to items array
-    case 'add item':
-      const newItem = prompt('Enter a new item: ');
-      loadout.items.push(newItem);
-      console.log(`${newItem} has been added to items.`);
-      break;
-    //if user selects select loadout, call selectLoadout function
-    case 'select loadout':
-      selectLoadout(loadout);
-      break;
-    //if user selects an invalid option, display error message
-    default:
-      console.log('Invalid selection. Please try again.');
+    let action = ''
+    while (action !== 'exit') {console.log('What would you like to do? (view classes, view weapons, view items, add class, add weapon, add item, select loadout, or exit)');
+      action = prompt('Selection: ').toLowerCase().trim();
+      switch (action) {
+        //if user selects view classes, display classes
+        case 'view classes':
+          console.log('Classes: ' + loadout.classes.join(', '));
+          break;
+        //if user selects view weapons, display weapons
+        case 'view weapons':
+          console.log('Weapons: ' + loadout.weapons.join(', '));
+          break;
+        //if user selects view items, display items
+        case 'view items':
+          console.log('Items: ' + loadout.items.join(', '));
+          break;
+        //if user selects add class, prompt user to enter class and add it to classes array
+        case 'add class':
+          const newClass = prompt('Enter a new class: ');
+          loadout.classes.push(newClass);
+          console.log(`${newClass} has been added to classes.`);
+          break;
+        //if user selects add weapon, prompt user to enter weapon and add it to weapons array
+        case 'add weapon':
+          const newWeapon = prompt('Enter a new weapon: ');
+          loadout.weapons.push(newWeapon);
+          console.log(`${newWeapon} has been added to weapons.`);
+          break;
+        //if user selects add item, prompt user to enter item and add it to items array
+        case 'add item':
+          const newItem = prompt('Enter a new item: ');
+          loadout.items.push(newItem);
+          console.log(`${newItem} has been added to items.`);
+          break;
+        //if user selects select loadout, call selectLoadout function
+        case 'select loadout':
+          selectLoadout(loadout);
+          break;
+        //if user selects an invalid option, display error message
+        default:
+          console.log('Invalid selection. Please try again.');
+        }
   }
 }
 
