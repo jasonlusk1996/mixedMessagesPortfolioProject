@@ -1,5 +1,5 @@
 //store object with class, weapon, and item
-const loadout = {classes: ['Warrior', 'Mage', 'Rogue','Archer','Monk'], weapons: ['Sword', 'Staff', 'Dagger','Bow','Staff'], items: ['Health Potion', 'Mana Potion', 'Stamina Potion','Poison Potion','Agility Potion']};
+const loadout = {classes: ['warrior', 'mage', 'rogue','archer','monk'], weapons: ['sword', 'staff', 'dagger','bow','staff'], items: ['health potion', 'mana potion', 'stamina potion','poison potion','agility potion']};
 
 //randomly select one class, one weapon, and one item from the loadout object
 function selectLoadout(loadout) {
@@ -62,5 +62,5 @@ function promptUser(loadout) {
   }
 }
 
-//user runs program
+//runs program
 promptUser(loadout);
