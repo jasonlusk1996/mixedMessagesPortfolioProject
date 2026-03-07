@@ -11,5 +11,13 @@ function selectLoadout(loadout) {
     console.log(message);
 }
 
+//ask user what they want to do (view classes, view weapons, view items, add class, add weapon, add item, or select loadout)
+//if user selects view classes, display classes
+//if user selects view weapons, display weapons
+//if user selects view items, display items
+//if user selects add class, prompt user to enter class and add it to classes array
+//if user selects add weapon, prompt user to enter weapon and add it to weapons array
+//if user selects add item, prompt user to enter item and add it to items array
+
 //user runs program
 selectLoadout(loadout);
