@@ -14,7 +14,8 @@ function selectLoadout(loadout) {
 //ask user what they want to do (view classes, view weapons, view items, add class, add weapon, add item, or select loadout)
 function promptUser(loadout) {
     const prompt = require('prompt-sync')();
-    let action = prompt('What would you like to do? (view classes, view weapons, view items, add class, add weapon, add item, select loadout)\n Selection:').toLowerCase().trim();
+    console.log('What would you like to do? (view classes, view weapons, view items, add class, add weapon, add item, select loadout)');
+    let action = prompt('Selection: ').toLowerCase().trim();
   switch (action) {
     //if user selects view classes, display classes
     case 'view classes':
