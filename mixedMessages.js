@@ -52,6 +52,9 @@ function promptUser(loadout) {
         case 'select loadout':
           selectLoadout(loadout);
           break;
+        case 'exit':
+          console.log('Exiting program. Goodbye!');
+          break;
         //if user selects an invalid option, display error message
         default:
           console.log('Invalid selection. Please try again.');
