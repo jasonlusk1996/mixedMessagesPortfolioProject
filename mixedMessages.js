@@ -47,6 +47,13 @@ function promptUser(loadout) {
       loadout.items.push(newItem);
       console.log(`${newItem} has been added to items.`);
       break;
+    //if user selects select loadout, call selectLoadout function
+    case 'select loadout':
+      selectLoadout(loadout);
+      break;
+    //if user selects an invalid option, display error message
+    default:
+      console.log('Invalid selection. Please try again.');
   }
 }
 
