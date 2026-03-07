@@ -12,6 +12,9 @@ function selectLoadout(loadout) {
 }
 
 //ask user what they want to do (view classes, view weapons, view items, add class, add weapon, add item, or select loadout)
+function promptUser() {
+    const action = prompt('What would you like to do? (view classes, view weapons, view items, add class, add weapon, add item, select loadout)').toLowerCase().trim();
+}
 //if user selects view classes, display classes
 //if user selects view weapons, display weapons
 //if user selects view items, display items
